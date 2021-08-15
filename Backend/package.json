@@ -1,0 +1,23 @@
+{
+  "name": "devfest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "chalk": "^4.1.2",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
