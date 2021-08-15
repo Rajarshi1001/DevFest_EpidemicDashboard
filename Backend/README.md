@@ -11,7 +11,7 @@ APIs used:
 {
   "World": {
     "Global": {
-      "ForEachDay": true,
+      "ForEachDay": false,
       "NewConfirmed": 100282,
       "TotalConfirmed": 1162857,
       "NewDeaths": 5658,
@@ -21,7 +21,7 @@ APIs used:
     },
     "Continents": {
       "Asia": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -31,7 +31,7 @@ APIs used:
         "Time": "00000000"
       },
       "Africa": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -41,7 +41,7 @@ APIs used:
         "Time": "00000000"
       },
       "North America": {
-        "ForEachDay": true,
+        "ForEachDay": false,
 
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
@@ -52,7 +52,7 @@ APIs used:
         "Time": "00000000"
       },
       "South America": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -62,7 +62,7 @@ APIs used:
         "Time": "00000000"
       },
       "Australia": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,

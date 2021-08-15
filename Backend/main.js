@@ -1,6 +1,7 @@
+require("dotenv").config();
 const covidPerDayStatusInternational = "covidPerDayStatusInternational";
 const covidPerDayStatusIndia = "covidPerDayStatusIndia";
-const covidInternational = "covidInternational";
+const covidWorldStats = "covidWorldStats";
 const covidIndia = "covidIndia";
 const { getDB, connect, getPrimaryKey } = require("./db.js");
 
@@ -11,7 +12,7 @@ vaccineIndiaURL = `https://www.mygov.in/sites/default/files/covid/vaccine/vaccin
 // Playground for now, to check out and handle data request and manipulations.
 
 const { MongoClient } = require("mongodb");
-const dbURL = `mongodb://localhost:27017`;
+const dbURL = process.env.MONGO_URL;
 const dbName = "mongodbVSCodePlaygroundDB";
 const dbCollection = "newCollection";
 const exampleComplexJSON = {
@@ -106,44 +107,6 @@ const client = new MongoClient(dbURL, {
   useUnifiedTopology: true,
 });
 
-async function main() {
-  try {
-    await client.connect();
-    await listDatabase(client);
-    /*
-    await createListing(client, {
-      trying: "CRUD",
-      done: "Create",
-      time: Date.now(),
-    });
-    */
-    await createListing(client, dbCollection, exampleComplexJSON);
-    /*
-    await createMultipleListing(client, [
-      {
-        trying: "Sem3",
-        done: "Sem2 Sem1",
-        time: Date.now(),
-      },
-      {
-        trying: "Angular",
-        done: "React",
-        time: Date.now(),
-      },
-      {
-        trying: "Trees",
-        done: "Lists",
-        time: Date.now(),
-      },
-    ]);
-    */
-    displayAllDataInCollection(client, dbCollection);
-    // await findOneListingByName(client, dbCollection, "Angular");
-  } catch (e) {
-    console.log(e);
-  }
-}
-
 async function displayAllCollectionsDetails(client) {
   client
     .db(dbName)
@@ -234,4 +197,14 @@ async function deleteListingByName(client, collection, nameOfListing) {
   console.log(`${result.deleteCount} document(s) were deleted`);
 }
 
-main().catch(console.error);
+module.exports = {
+  client,
+  displayAllDataInCollection,
+  displayAllCollectionsDetails,
+  listDatabase,
+  createListing,
+  createMultipleListing,
+  findOneListingByName,
+  updateListingByName,
+  deleteListingByName,
+};
