@@ -1,6 +1,11 @@
-# Resources
+# COVID STATUS DASHBOARD
 
-APIs used:
+## Tools used:
+
+- FrontEnd - HTML5, CSS
+- Backend - ExpressJS, MongoDB, NodeJS
+
+## APIs used:
 
 - [vaccine_api_India](https://www.mygov.in/sites/default/files/covid/vaccine/vaccine_counts_today.json?timestamp=1628951400)
 - [covid_cases_India](https://www.mygov.in/sites/default/files/covid/covid_state_counts_ver1.json?timestamp=1628951400)

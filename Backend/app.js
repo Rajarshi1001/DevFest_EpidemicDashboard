@@ -2,36 +2,57 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
-const { MongoClient, ObjectId } = require("mongodb");
-const PORT = process.env.PORT || 5000;
+const mongoose = require("mongoose");
+// const models = require("./models");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-// mongoD client declaration
-const client = new MongoClient(process.env.MONGO_URL, {
+// mongoD connection
+mongoose.connect(`${process.env.MONGO_URL}/${process.env.DB_NAME}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-app.get("/login", function (req, res) {});
-client.connect((err) => {
-  if (err) {
-    console.log(`Unable to connect to DB: ${err}`);
-    process.exit(1);
-  } else {
-    app.listen(PORT, () => {
-      client
-        .db(process.env.DB_NAME)
-        .listCollections()
-        .toArray((err, result) => {
-          if (err) console.error(err);
-          else console.log(result);
-          console.log(`Connected to DB, App listening on port ${PORT}.`);
-        });
-    });
-  }
+app.use("/login", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/login.html"));
 });
-app.
+app.use("/world", function (req, res) {
+  res.sendFile(path.join(__dirname, "./public/world.html"));
+});
+app.use("/india", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/india.html"));
+});
+
+const icovidIndiaStates = new mongoose.Schema({
+  state_helpline: { type: String },
+  covid_portal_url: { type: String },
+  covid_facilities: { type: String },
+  state_donation_url: { type: String },
+  "Total Confirmed cases": { type: Number },
+  "Cured/Discharged/Migrated": { type: Number },
+  last_death: { type: Number },
+  Active: { type: Number },
+  Time: { type: Number },
+});
+
+// mongoD models
+const covidIndiaStates = mongoose.model("covidIndiaState", icovidIndiaStates);
+// const covidInternational = mongoose.model(
+//   "covidInternational",
+//   icovidInternational
+// );
+// const covidPerDayStatusInternational = mongoose.model(
+//   "covidPerDayStatusInternational",
+//   icovidPerDayStatusInternational
+// );
+// const covidPerDayStatusIndia = mongoose.model(
+//   "covidPerDayStatusIndia",
+//   icovidPerDayStatusIndia
+// );
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server listening on ${process.env.PORT}...`);
+});

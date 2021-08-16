@@ -1,3 +1,75 @@
-<div class="preloader"></div>
-<link rel='stylesheet' href='./world.css'>
-<script.src="..\world.js">
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="favicon.ico?v=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv=“Pragma” content=”no-cache”>
+    <meta http-equiv=“Expires” content=”-1″>
+    <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/kitchenblue.css?v=1">
+    <link rel="stylesheet" href="./world.css">
+    <title>Covid Web</title>
+
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <button>x</button>
+        <ul>
+            <li>
+                <a href="/">Home Page</a>
+            </li>
+            <li>
+                <a href="/world">World Status</a>
+            </li>
+            <li>
+                <a href="/india">India Status</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 class='section-heading'>WORLD STATUS</h1>
+    <h2 class='section-subheading'>SEARCH COUNTRY NAME</h2>
+
+
+    <div class="section-description">
+
+        <p class="section-subheading">
+        <form id="query-form">
+            <div>
+                <span><label for="ingredients">Country :</label><input class="textfield" id="ingredients" type="text"
+                        name="ingredients" placeholder="e.g. India, China" onChange="sanitizeInputs()" /></span>
+            </div>
+
+            <div class="button">
+                <br />
+                <input class="button" type="button" value="Reset" id="resetButton"
+                    onClick="this.form.reset();resetResults()" />
+                <input class="button" type="submit" value="Search ..." id="searchButton" />
+            </div>
+        </form>
+        </p>
+
+        <div class="section-subheading" id="search-results-heading"></div>
+        <div class="results-div" id="results"></div>
+
+</body>
+
+<footer>
+    <h3 class="copyright-text">API: <a href="https://covid19api.com/" target="_blank">Covid-19 API</a></h3>
+</footer>
+
+<!-- JQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Our codes -->
+<script src="js/kitchenblue.js?v=1"></script>
+
+</html>
