@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const CovidIndiaStates = new mongoose.Schema({
   state_helpline: { type: String },
   covid_portal_url: { type: String },
@@ -10,4 +11,4 @@ const CovidIndiaStates = new mongoose.Schema({
   Active: { type: Number },
   Time: { type: Number },
 });
-module.exports = mongoose.module("CovidIndiaStatus", CovidIndiaStates);
+module.exports = mongoose.model("covidIndiaStates", CovidIndiaStates);

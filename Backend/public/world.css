@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Titillium+Web:wght@400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 body {
+  color: #4d4d4d;
   background-color: #c4c4c4;
   overflow-x: hidden;
 }
@@ -53,6 +50,12 @@ a:hover {
 .button {
   margin: auto;
   max-width: 65%;
+}
+
+body {
+  /* background: url(./abstract-world-map.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero {
@@ -114,7 +117,6 @@ a:hover {
 ------------------------- */
 
 footer {
-   background-color: #34699a; 
    color: white;
   /* background-image: linear-gradient(to right top, #34699a, #113f67); */
   padding-bottom: 4rem;
@@ -144,3 +146,72 @@ footer {
   }
 
 }
+
+footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
+  background-color: #34699a; 
+}
+
+.nav-bar {
+  z-index: 40000;
+  position: relative;
+}
+
+  nav > ul > li{
+    list-style-type: none;
+    margin: 0 2vw;
+    padding: 0.7em 0em;
+  }
+  
+  li > a {
+    font-size: 1.5em;
+    color: rgb(207, 199, 199);
+    text-decoration: none;
+    font-family: "Titillium Web";
+    padding: 0.2vw;
+  }
+
+  a:hover { 
+      color: #c6e9ff;
+  }
+
+  nav > button {
+      display: none;
+  }
+  nav {
+    width: 100vw;
+    background-color: #4D4D4D;
+    border-bottom: 1px solid #000;
+  }
+
+  nav > ul {
+    padding-right: 3vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: 500px) {
+  nav > ul{
+    flex-direction: column;
+  }
+  
+  ul > li{
+    margin: 0;
+  }
+  li > a{
+    display: block;
+  }
+   
+  nav > button{
+     display: block;
+     padding: 2vw;
+     font-size: 3vh;
+     background-color: #424242;
+     border: none;
+     outline: none;
+     cursor: pointer;
+   }
+ }

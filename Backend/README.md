@@ -1,6 +1,11 @@
-# Resources
+# COVID STATUS DASHBOARD
 
-APIs used:
+## Tools used:
+
+- FrontEnd - HTML5, CSS
+- Backend - ExpressJS, MongoDB, NodeJS
+
+## APIs used:
 
 - [vaccine_api_India](https://www.mygov.in/sites/default/files/covid/vaccine/vaccine_counts_today.json?timestamp=1628951400)
 - [covid_cases_India](https://www.mygov.in/sites/default/files/covid/covid_state_counts_ver1.json?timestamp=1628951400)
@@ -11,7 +16,7 @@ APIs used:
 {
   "World": {
     "Global": {
-      "ForEachDay": true,
+      "ForEachDay": false,
       "NewConfirmed": 100282,
       "TotalConfirmed": 1162857,
       "NewDeaths": 5658,
@@ -21,7 +26,7 @@ APIs used:
     },
     "Continents": {
       "Asia": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -31,7 +36,7 @@ APIs used:
         "Time": "00000000"
       },
       "Africa": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -41,7 +46,7 @@ APIs used:
         "Time": "00000000"
       },
       "North America": {
-        "ForEachDay": true,
+        "ForEachDay": false,
 
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
@@ -52,7 +57,7 @@ APIs used:
         "Time": "00000000"
       },
       "South America": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,
@@ -62,7 +67,7 @@ APIs used:
         "Time": "00000000"
       },
       "Australia": {
-        "ForEachDay": true,
+        "ForEachDay": false,
         "NewConfirmed": 0,
         "TotalConfirmed": 0,
         "NewDeaths": 0,

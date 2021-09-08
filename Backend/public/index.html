@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Covid Analysis</title>
+</head>
+
+<body>
+    <img class="pattern" src="./converted.jpg" alt="Broken">
+    <nav class="nav-bar">
+        <button>x</button>
+        <ul>
+            <li>
+                <a href="#">Home Page</a>
+            </li>
+            <li>
+                <a href="/world">World Status</a>
+            </li>
+            <li>
+                <a href="/india">India Status</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="border-div">
+        <div class="front-view">
+            <center>
+                <h1 id="heading">COVID STATUS</h1>
+            </center>
+        </div>
+    </div>
+
+    <div class="content">
+        <p> Coronavirus disease (COVID-19) is an infectious disease caused by a
+            newly discovered coronavirus.Most people infected with the
+            COVID-19 virus will experience mild to moderate respiratory
+            illness and recover without requiring special treatment.
+            Older people, and those with underlying medical problems like cardiovascular
+            disease, diabetes, chronic respiratory disease, and cancer are more
+            likely to develop serious illness.The best way to prevent and slow down
+            transmission is to be well informed about the COVID-19 virus,
+            the disease it causes and how it spreads. Protect yourself
+            and others from infection by washing your hand using an alcohol
+            based rub frequently and not touching your face.The COVID-19 virus spreads primarily
+            through droplets of saliva or discharge from the nose when an
+            infected person coughs or sneezes,so it’s important that you also practice
+            respiratory etiquette
+            (for example, by coughing into a flexed elbow)</p>
+        <br>
+        <p>We are still learning about the risk of COVID-19 in people living with HIV.
+            Current evidence suggests that people living with HIV are at higher risk of becoming seriously ill,
+            and dying from, COVID-19, than people without HIV.However, HIV appears to be less of a risk factor than
+            other
+            health conditions, such as obesity, diabetes, severe asthma, respiratory disease, heart disease, liver
+            disease,
+            stroke, dementia, or older age.The best way to stay healthy is by taking your antiretroviral treatment,
+            as well as any medication you have been prescribed for other health conditions.We still don’t know whether
+            people living with HIV are more likely to get coronavirus, the virus that causes COVID-19,
+            as more research needs to be done to understand this.
+            We will continue to update this page as we learn more..</p>
+        <br>
+        <p>
+            Your clinic or health care provider should let you know if there are any
+            changes or disruptions to services during COVID-19. If you are having trouble accessing
+            the things you need, including food and medication, call your usual treatment provider.During this time,
+            some governments are imposing lockdowns to stop the spread of the virus.
+            This may be particularly difficult for some people. Keeping in touch with people remotely,
+            such as online, by phone or by video chat, can help you to stay socially connected and mentally healthy.
+        </p>
+        <br>
+        <p>
+            But I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose.
+            To do so, I will give you a complete account of the system, and expound the actual teachings of the great
+            explorer of the truth, the master-builder of human happiness. No one rejects, dislikes or avoids pleasure
+            itself,
+            because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter
+            consequences
+            that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of
+            itelf,
+            because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great
+            pleasure.
+            take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some
+            advantage
+            from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying
+            consequences, or one who avoids a pain that produces no resultant pleasure? [33] On the other hand, we
+            denounce
+            with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure
+            of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;
+            and equal blame belongs to those who fail in their duty through weakness of will, which is the same as
+            saying
+            through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free
+            hour,
+            when our power of choice is untrammeled and when nothing prevents our being able to do what we like best,
+            pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of
+            duty
+            or the obligations of business
+            it will frequently occur that pleasures have to be repudiated and annoyances accepted
+        <div class="list">
+            <h2>Some of the Symptoms include:</h2>
+            <ol>
+                <li>Fever or chills</li>
+                <li>Cough</li>
+                <li>Shortness of breath or difficulty breathing</li>
+                <li>Fatigue</li>
+                <li>Muscle or body aches</li>
+                <li>Headache</li>
+                <li>New loss of taste or smell</li>
+                <li>Sore throat</li>
+                <li>Congestion or runny nose</li>
+                <li>Nausea or vomiting</li>
+                <li>Diarrhea</li>
+            </ol>
+        </div>
+        </p>
+
+        </p>
+    </div>
+    <br>
+
+    <div class="space"></div>
+    <script src="jquery-3.4.0.min.js">
+        /* only execute this script when the document is ready */
+        $(document).ready(function () {
+            /* function called when you click of the button */
+            $("button").click(function () {
+
+                /* this if else to change the text in the button */
+                if ($("button").text() == "☰") {
+                    $("button").text("🞬");
+                } else {
+                    $("button").text("☰");
+                }
+
+                /* this function toggle the visibility of our "li" elements */
+                $("li").toggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>
